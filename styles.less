@@ -1,0 +1,288 @@
+
+.compact-tree-view .tree-view li:not(.list-nested-item),
+.compact-tree-view .tree-view li.list-nested-item > .list-item {
+    line-height: 2.1rem;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+    position: relative;
+    top: -1px;
+    margin-right: 10px;
+}
+
+.tree-view > ol {
+    padding-left: 10px;
+}
+
+.list-group .icon::before, .list-tree .icon::before {
+    font-size: 1.35em;
+    margin-right: 0.3em;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li,
+.list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+    padding-left: 10px;
+}
+
+.list-tree.has-collapsable-children li.list-item {
+    margin-left: 5px;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+    margin-right: 3px;
+}
+
+.amu-compact-tab-bar .tool-bar.tool-bar-16px .tool-bar-btn,
+.amu-compact-tab-bar .tool-bar.tool-bar-24px .tool-bar-btn,
+.amu-compact-tab-bar .tool-bar.tool-bar-32px .tool-bar-btn {
+    height: 2.4rem;
+}
+
+.amu-compact-tab-bar .tab-bar, .amu-compact-tab-bar .tab-bar .tab {
+    height: 2.4rem;
+    line-height: 2.4rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.amu-compact-tab-bar .tool-bar.tool-bar-16px.tool-bar-vertical .tool-bar-spacer, .amu-compact-tab-bar .tool-bar.tool-bar-24px.tool-bar-vertical .tool-bar-spacer, .amu-compact-tab-bar .tool-bar.tool-bar-32px.tool-bar-vertical .tool-bar-spacer {
+    width: 39px;
+    height: 0.5em;
+}
+
+.amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-btn {
+    color: rgba(170, 187, 195, 0.65);
+}
+
+.amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-btn.tool-bar-item-align-end, .amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-btn:not(.tool-bar-item-align-end) + .tool-bar-btn:hover, .amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-spacer + .tool-bar-btn:hover,
+.amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-btn:hover {
+    color: #ffffff;
+    transition: color 0.3s ease 0s;
+}
+
+.tab-bar .tab {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.tab-bar .tab .title {
+    margin-top: -3px;
+}
+
+.tool-bar.tool-bar-vertical .tool-bar-spacer {
+    margin: 0.4rem 0;
+}
+
+.linter-status-count a {
+    padding: 5px;
+}
+
+status-bar .icon:before {
+    margin-right: 2px;
+}
+
+status-bar {
+    font-size: 11px;
+    font-family: 'Fira Mono';
+    text-rendering: optimizeLegibility;
+}
+
+atom-pane .tab-bar .tab .title[data-path]::before {
+    margin-right: 8px;
+}
+
+atom-workspace {
+    font-family: 'Fira Sans';
+    text-rendering: optimizeLegibility;
+}
+
+atom-text-editor {
+  text-rendering: optimizeLegibility;
+}
+
+atom-text-editor::shadow {
+
+  .omni-ruler {
+    background-color: #455A64;
+    opacity: 1;
+  }
+
+  .invisible-character {
+    color: #455A64;
+    opacity: 1;
+  }
+
+  .cursor {
+    border-left-width: 3px;
+  }
+
+  .wrap-guide {
+    background: #49656f !important;
+    opacity: 0.8;
+  }
+
+  .indent-guide {
+    color: #49656f;
+    opacity: 0.8;
+  }
+
+  .text.restructuredtext .comment.line.double-dot.restructuredtext {
+    color: #64FFDA;
+  }
+
+  .text.restructuredtext .markup.italic.restructuredtext {
+    color: #EA80FC;
+  }
+
+  .text.restructuredtext .markup.bold.restructuredtext {
+    color: #EEFF41;
+  }
+
+  .text.restructuredtext .entity.name.role.restructuredtext,
+  .text.restructuredtext .entity.name.tag.restructuredtext,
+  .text.restructuredtext .markup.underline.substitution.restructuredtext,
+  .text.restructuredtext .punctuation.definition.heading.restructuredtext {
+    color: #40C4FF;
+  }
+
+  .text.restructuredtext .string.other.interpreted.restructuredtext,
+  .text.restructuredtext .string.other.link.title.restructuredtext,
+  .text.restructuredtext .markup.underline.link.https.hyperlink,
+  .text.restructuredtext .markup.underline.link.http.hyperlink {
+    color: #FFAB40;
+  }
+
+  .text.restructuredtext .constant.other.footnote.link.restructuredtext {
+    color: #FF6E40;
+  }
+
+  .source.python .comment.line.number-sign.python {
+    color: #546E7A;
+  }
+
+  .source.python .string.quoted.double.block.sql.python {
+    color: #CCFF90;
+  }
+
+  .source.python .string.quoted.single.single-line.python,
+  .source.python .constant.character.escape.linefeed.python,
+  .source.python .constant.character.escape.return.python,
+  .source.python .string.quoted.single.python {
+    color: #EEFF41;
+  }
+
+  .source.python .entity.name.function.python,
+  .source.python .meta.function-call.python,
+  .source.python .support.function.magic.python,
+  .source.python .support.type.python {
+    color: #40C4FF;
+  }
+
+  .source.python .support.function.builtin.python {
+    color: #64FFDA;
+  }
+
+  .source.python .constant.language.python,
+  .source.python .constant.other.placeholder.python,
+  .source.python .constant.numeric.integer.decimal.python {
+    color: #FF6E40;
+  }
+
+  .source.python .entity.name.type.class.python {
+    color: #FFAB40;
+  }
+
+  .source.python .entity.other.inherited-class.python {
+    color: #69F0AE;
+  }
+
+  .source.python .meta.function-call.arguments.python,
+  .source.python .variable.language.self.python {
+    color: #FFFFFF;
+  }
+
+  .source.python .variable.parameter.function-call.python {
+    color: #B0BEC5;
+  }
+
+  .source.python .support.type.exception.python {
+    color: #FFC400;
+  }
+
+  .source.python .keyword.control.statement.python,
+  .source.python .keyword.control.exception.python,
+  .source.python .keyword.control.repeat.python,
+  .source.python .keyword.control.conditional.python,
+  .source.python .keyword.control.flow.python,
+  .source.python .keyword.other.python,
+  .source.python .keyword.operator.logical.python,
+  .source.python .storage.type.function.python,
+  .source.python .keyword.control.import.python,
+  .source.python .keyword.control.import.from.python,
+  .source.python .keyword.operator.comparison.python,
+  .source.python .keyword.operator.assignment.python,
+  .source.python .keyword.operator.python {
+    color: #EA80FC;
+  }
+
+  .source.python .keyword.codetag.notation.python {
+    color: #FF4081;
+  }
+
+  .source.shell .string.interpolated.backtick.shell {
+    color: #40C4FF;
+  }
+
+  .source.shell .support.function.builtin.shell {
+    color: #64FFDA;
+  }
+
+  .source.shell .string.quoted.single.shell,
+  .source.shell .string.quoted.double.shell {
+    color: #EEFF41;
+  }
+
+  .source.shell .punctuation.definition.variable.shell,
+  .source.shell .variable.other.normal.shell,
+  .source.shell .variable.other.bracket.shell {
+    color: #FF6E40;
+  }
+
+  .source.shell .keyword.control.shell {
+    color: #EA80FC;
+  }
+
+  .source.shell .comment.line.number-sign.shebang.shell {
+    color: #546E7A;
+  }
+
+  .source.makefile .support.function.target.PHONY.makefile {
+    color: #64FFDA;
+  }
+
+  .source.makefile .string.quoted.double.shell,
+  .source.makefile .string.quoted.single.shell {
+    color: #EEFF41;
+  }
+
+  .source.makefile .meta.scope.prerequisites.makefile,
+  .source.makefile .entity.name.function.target.makefile {
+    color: #40C4FF;
+  }
+
+  .source.makefile .constant.character.escape.continuation.makefile {
+    color: #FF6E40;
+  }
+
+  .source.yaml .entity.name.tag.yaml {
+    color: #40C4FF;
+  }
+
+  .source.yaml .string.unquoted.yaml,
+  .source.yaml .string.quoted.double.yaml,
+  .source.yaml .string.quoted.single.yaml {
+    color: #EEFF41;
+  }
+
+}
+

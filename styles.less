@@ -1,3 +1,97 @@
+.rst-preview-pandoc {
+    color: #000000;
+}
+
+.travis-ci-status .icon:before {
+    margin-top: 5px;
+}
+
+status-bar .icon-x:before {
+    top: 2px;
+}
+
+status-bar .icon-stop:before, status-bar .icon-alert:before,
+status-bar .icon-info:before {
+    top: 1px;
+}
+
+.ion-plus:before {
+    font-family: Devicons;
+    content: "\E664";
+    font-weight: 800;
+}
+
+.mfizz-rsthtml:before {
+    font-family: MFizz;
+    content: "\F123";
+}
+
+.ion-gear-z:before {
+    font-family: MFizz;
+    content: "\F10D";
+}
+
+.tool-bar button.tool-bar-btn:before {
+    display: inline;
+}
+
+.terminal-icon:before {
+    font-family: Devicons;
+    content: "\E6A2";
+}
+
+.icon[data-name$=".in"]:before, .icon[data-name$=".cson"]:before,
+.icon[data-name$=".json"]:before {
+    font-family: Mfizz;
+    content: "\F110";
+}
+
+.icon[data-name$="Pipfile.lock"]:before,
+.icon[data-name$="Pipfile"]:before {
+    font-family: fontawesome;
+    content: "\F187";
+}
+
+.icon[data-name^="test_"]:before {
+    font-family: file-icons;
+    content: "\EA66";
+}
+
+.directory > .header > .icon {
+    &[data-path$="tests"]:before {
+        font-family: "file-icons";
+        content: "\EA63";
+    }
+
+    &[data-path$="docs"]:before {
+        font-family: "Octicons Regular";
+        content: "\F007";
+    }
+
+    &[data-path$="init.d"]:before {
+        font-family: Devicons;
+        content: "\E6A2";
+    }
+
+    &[data-path$="debian-ubuntu"]:before {
+        font-family: Mfizz;
+        content: "\F111";
+    }
+
+    &[data-path$="bash-completion"]:before {
+        font-family: Devicons;
+        content: "\E6A2";
+    }
+}
+
+.platformio-ide-terminal .xterm {
+    color: #aaaaaa;
+    background-color: #1c1d21;
+}
+
+.tool-bar {
+    z-index: 2;
+}
 
 .compact-tree-view .tree-view li:not(.list-nested-item),
 .compact-tree-view .tree-view li.list-nested-item > .list-item {
@@ -8,6 +102,27 @@
     position: relative;
     top: -1px;
     margin-right: 10px;
+}
+
+.tree-view {
+    font-size: 11px;
+}
+
+.pane .title {
+    font-size: 11px;
+    font-family: 'Fira Code';
+    font-weight: 500;
+}
+
+.sb-table.linter td {
+    font-size: 11px;
+    font-family: 'Fira Code';
+}
+
+.sb-table.linter th {
+    font-size: 11px;
+    font-family: 'Fira Code';
+    font-weight: 600;
 }
 
 .tree-view > ol {
@@ -42,7 +157,7 @@
     height: 2.4rem;
     line-height: 2.4rem;
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .amu-compact-tab-bar .tool-bar.tool-bar-16px.tool-bar-vertical .tool-bar-spacer, .amu-compact-tab-bar .tool-bar.tool-bar-24px.tool-bar-vertical .tool-bar-spacer, .amu-compact-tab-bar .tool-bar.tool-bar-32px.tool-bar-vertical .tool-bar-spacer {
@@ -50,7 +165,7 @@
     height: 0.5em;
 }
 
-.amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-btn {
+.amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-btn{
     color: rgba(170, 187, 195, 0.65);
 }
 
@@ -58,6 +173,10 @@
 .amu-tinted-tab-bar.amu-panel-contrast .tool-bar.tool-bar-vertical .tool-bar-btn:hover {
     color: #ffffff;
     transition: color 0.3s ease 0s;
+}
+
+.close-icon {
+    color: #ffffff;
 }
 
 .tab-bar .tab {
@@ -83,7 +202,7 @@ status-bar .icon:before {
 
 status-bar {
     font-size: 11px;
-    font-family: 'Fira Mono';
+    font-family: 'Fira Code';
     text-rendering: optimizeLegibility;
 }
 
@@ -96,193 +215,205 @@ atom-workspace {
     text-rendering: optimizeLegibility;
 }
 
-atom-text-editor {
-  text-rendering: optimizeLegibility;
+atom-text-editor.editor {
+    font-family: 'Fira Code';
+    font-size: 10px;
+    text-rendering: optimizeLegibility;
 }
 
-atom-text-editor::shadow {
+atom-text-editor.editor .syntax--string.syntax--quoted,
+atom-text-editor.editor .syntax--string.syntax--regexp {
+  -webkit-font-feature-settings: "liga" off, "calt" off;
+}
 
-  .omni-ruler {
-    background-color: #455A64;
-    opacity: 1;
+atom-text-editor.editor {
+
+  // .omni-ruler {
+  //   background-color: #455A64;
+  //   opacity: 1;
+  // }
+
+  .gutter {
+    min-width: 0.1em;
   }
 
   .invisible-character {
     color: #455A64;
-    opacity: 1;
+    opacity: 0.75;
   }
 
   .cursor {
+    color: #455A64;
+    opacity: 0.75;
     border-left-width: 3px;
   }
 
   .wrap-guide {
-    background: #49656f !important;
-    opacity: 0.8;
+    background: #455A64 !important;
+    opacity: 0.25;
   }
 
   .indent-guide {
     color: #49656f;
-    opacity: 0.8;
+    opacity: 0.75;
   }
 
-  .text.restructuredtext .comment.line.double-dot.restructuredtext {
-    color: #64FFDA;
-  }
-
-  .text.restructuredtext .markup.italic.restructuredtext {
-    color: #EA80FC;
-  }
-
-  .text.restructuredtext .markup.bold.restructuredtext {
-    color: #EEFF41;
-  }
-
-  .text.restructuredtext .entity.name.role.restructuredtext,
-  .text.restructuredtext .entity.name.tag.restructuredtext,
-  .text.restructuredtext .markup.underline.substitution.restructuredtext,
-  .text.restructuredtext .punctuation.definition.heading.restructuredtext {
-    color: #40C4FF;
-  }
-
-  .text.restructuredtext .string.other.interpreted.restructuredtext,
-  .text.restructuredtext .string.other.link.title.restructuredtext,
-  .text.restructuredtext .markup.underline.link.https.hyperlink,
-  .text.restructuredtext .markup.underline.link.http.hyperlink {
-    color: #FFAB40;
-  }
-
-  .text.restructuredtext .constant.other.footnote.link.restructuredtext {
-    color: #FF6E40;
-  }
-
-  .source.python .comment.line.number-sign.python {
-    color: #546E7A;
-  }
-
-  .source.python .string.quoted.double.block.sql.python {
-    color: #CCFF90;
-  }
-
-  .source.python .string.quoted.single.single-line.python,
-  .source.python .constant.character.escape.linefeed.python,
-  .source.python .constant.character.escape.return.python,
-  .source.python .string.quoted.single.python {
-    color: #EEFF41;
-  }
-
-  .source.python .entity.name.function.python,
-  .source.python .meta.function-call.python,
-  .source.python .support.function.magic.python,
-  .source.python .support.type.python {
-    color: #40C4FF;
-  }
-
-  .source.python .support.function.builtin.python {
-    color: #64FFDA;
-  }
-
-  .source.python .constant.language.python,
-  .source.python .constant.other.placeholder.python,
-  .source.python .constant.numeric.integer.decimal.python {
-    color: #FF6E40;
-  }
-
-  .source.python .entity.name.type.class.python {
-    color: #FFAB40;
-  }
-
-  .source.python .entity.other.inherited-class.python {
-    color: #69F0AE;
-  }
-
-  .source.python .meta.function-call.arguments.python,
-  .source.python .variable.language.self.python {
-    color: #FFFFFF;
-  }
-
-  .source.python .variable.parameter.function-call.python {
-    color: #B0BEC5;
-  }
-
-  .source.python .support.type.exception.python {
-    color: #FFC400;
-  }
-
-  .source.python .keyword.control.statement.python,
-  .source.python .keyword.control.exception.python,
-  .source.python .keyword.control.repeat.python,
-  .source.python .keyword.control.conditional.python,
-  .source.python .keyword.control.flow.python,
-  .source.python .keyword.other.python,
-  .source.python .keyword.operator.logical.python,
-  .source.python .storage.type.function.python,
-  .source.python .keyword.control.import.python,
-  .source.python .keyword.control.import.from.python,
-  .source.python .keyword.operator.comparison.python,
-  .source.python .keyword.operator.assignment.python,
-  .source.python .keyword.operator.python {
-    color: #EA80FC;
-  }
-
-  .source.python .keyword.codetag.notation.python {
-    color: #FF4081;
-  }
-
-  .source.shell .string.interpolated.backtick.shell {
-    color: #40C4FF;
-  }
-
-  .source.shell .support.function.builtin.shell {
-    color: #64FFDA;
-  }
-
-  .source.shell .string.quoted.single.shell,
-  .source.shell .string.quoted.double.shell {
-    color: #EEFF41;
-  }
-
-  .source.shell .punctuation.definition.variable.shell,
-  .source.shell .variable.other.normal.shell,
-  .source.shell .variable.other.bracket.shell {
-    color: #FF6E40;
-  }
-
-  .source.shell .keyword.control.shell {
-    color: #EA80FC;
-  }
-
-  .source.shell .comment.line.number-sign.shebang.shell {
-    color: #546E7A;
-  }
-
-  .source.makefile .support.function.target.PHONY.makefile {
-    color: #64FFDA;
-  }
-
-  .source.makefile .string.quoted.double.shell,
-  .source.makefile .string.quoted.single.shell {
-    color: #EEFF41;
-  }
-
-  .source.makefile .meta.scope.prerequisites.makefile,
-  .source.makefile .entity.name.function.target.makefile {
-    color: #40C4FF;
-  }
-
-  .source.makefile .constant.character.escape.continuation.makefile {
-    color: #FF6E40;
-  }
-
-  .source.yaml .entity.name.tag.yaml {
-    color: #40C4FF;
-  }
-
-  .source.yaml .string.unquoted.yaml,
-  .source.yaml .string.quoted.double.yaml,
-  .source.yaml .string.quoted.single.yaml {
-    color: #EEFF41;
-  }
+  // .text.restructuredtext .comment.line.double-dot.restructuredtext {
+  //   color: #64FFDA;
+  // }
+  //
+  // .text.restructuredtext .markup.italic.restructuredtext {
+  //   color: #EA80FC;
+  // }
+  //
+  // .text.restructuredtext .markup.bold.restructuredtext {
+  //   color: #EEFF41;
+  // }
+  //
+  // .text.restructuredtext .entity.name.role.restructuredtext,
+  // .text.restructuredtext .entity.name.tag.restructuredtext,
+  // .text.restructuredtext .markup.underline.substitution.restructuredtext,
+  // .text.restructuredtext .punctuation.definition.heading.restructuredtext {
+  //   color: #40C4FF;
+  // }
+  //
+  // .text.restructuredtext .string.other.interpreted.restructuredtext,
+  // .text.restructuredtext .string.other.link.title.restructuredtext,
+  // .text.restructuredtext .markup.underline.link.https.hyperlink,
+  // .text.restructuredtext .markup.underline.link.http.hyperlink {
+  //   color: #FFAB40;
+  // }
+  //
+  // .text.restructuredtext .constant.other.footnote.link.restructuredtext {
+  //   color: #FF6E40;
+  // }
+  //
+  // .source.python .comment.line.number-sign.python {
+  //   color: #546E7A;
+  // }
+  //
+  // .source.python .string.quoted.double.block.sql.python {
+  //   color: #CCFF90;
+  // }
+  //
+  // .source.python .string.quoted.single.single-line.python,
+  // .source.python .constant.character.escape.linefeed.python,
+  // .source.python .constant.character.escape.return.python,
+  // .source.python .string.quoted.single.python {
+  //   color: #EEFF41;
+  // }
+  //
+  // .source.python .entity.name.function.python,
+  // .source.python .meta.function-call.python,
+  // .source.python .support.function.magic.python,
+  // .source.python .support.type.python {
+  //   color: #40C4FF;
+  // }
+  //
+  // .source.python .support.function.builtin.python {
+  //   color: #64FFDA;
+  // }
+  //
+  // .source.python .constant.language.python,
+  // .source.python .constant.other.placeholder.python,
+  // .source.python .constant.numeric.integer.decimal.python {
+  //   color: #FF6E40;
+  // }
+  //
+  // .source.python .entity.name.type.class.python {
+  //   color: #FFAB40;
+  // }
+  //
+  // .source.python .entity.other.inherited-class.python {
+  //   color: #69F0AE;
+  // }
+  //
+  // .source.python .meta.function-call.arguments.python,
+  // .source.python .variable.language.self.python {
+  //   color: #FFFFFF;
+  // }
+  //
+  // .source.python .variable.parameter.function-call.python {
+  //   color: #B0BEC5;
+  // }
+  //
+  // .source.python .support.type.exception.python {
+  //   color: #FFC400;
+  // }
+  //
+  // .source.python .keyword.control.statement.python,
+  // .source.python .keyword.control.exception.python,
+  // .source.python .keyword.control.repeat.python,
+  // .source.python .keyword.control.conditional.python,
+  // .source.python .keyword.control.flow.python,
+  // .source.python .keyword.other.python,
+  // .source.python .keyword.operator.logical.python,
+  // .source.python .storage.type.function.python,
+  // .source.python .keyword.control.import.python,
+  // .source.python .keyword.control.import.from.python,
+  // .source.python .keyword.operator.comparison.python,
+  // .source.python .keyword.operator.assignment.python,
+  // .source.python .keyword.operator.python {
+  //   color: #EA80FC;
+  // }
+  //
+  // .source.python .keyword.codetag.notation.python {
+  //   color: #FF4081;
+  // }
+  //
+  // .source.shell .string.interpolated.backtick.shell {
+  //   color: #40C4FF;
+  // }
+  //
+  // .source.shell .support.function.builtin.shell {
+  //   color: #64FFDA;
+  // }
+  //
+  // .source.shell .string.quoted.single.shell,
+  // .source.shell .string.quoted.double.shell {
+  //   color: #EEFF41;
+  // }
+  //
+  // .source.shell .punctuation.definition.variable.shell,
+  // .source.shell .variable.other.normal.shell,
+  // .source.shell .variable.other.bracket.shell {
+  //   color: #FF6E40;
+  // }
+  //
+  // .source.shell .keyword.control.shell {
+  //   color: #EA80FC;
+  // }
+  //
+  // .source.shell .comment.line.number-sign.shebang.shell {
+  //   color: #546E7A;
+  // }
+  //
+  // .source.makefile .support.function.target.PHONY.makefile {
+  //   color: #64FFDA;
+  // }
+  //
+  // .source.makefile .string.quoted.double.shell,
+  // .source.makefile .string.quoted.single.shell {
+  //   color: #EEFF41;
+  // }
+  //
+  // .source.makefile .meta.scope.prerequisites.makefile,
+  // .source.makefile .entity.name.function.target.makefile {
+  //   color: #40C4FF;
+  // }
+  //
+  // .source.makefile .constant.character.escape.continuation.makefile {
+  //   color: #FF6E40;
+  // }
+  //
+  // .source.yaml .entity.name.tag.yaml {
+  //   color: #40C4FF;
+  // }
+  //
+  // .source.yaml .string.unquoted.yaml,
+  // .source.yaml .string.quoted.double.yaml,
+  // .source.yaml .string.quoted.single.yaml {
+  //   color: #EEFF41;
+  // }
 
 }
-
